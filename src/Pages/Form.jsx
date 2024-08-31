@@ -32,7 +32,7 @@ export const Form = () =>{
       <div className="pt-4 flex justify-center">
           <Button label={"Donate"} onPress={
             async () => {
-              const res = await axios.post("http://localhost:3000/form", {
+              const res = await axios.post("https://donor-backend.onrender.com/form", {
                 name,
                 email,
                 number,

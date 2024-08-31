@@ -15,7 +15,7 @@ export const DeleteCheckbox = ({ id, onDelete }) => {
     if (newCheckedState) {
       setIsDeleting(true);
     try {
-        await axios.delete(`http://localhost:3000/delete/${id}`);
+        await axios.delete(`https://donor-backend.onrender.com/delete/${id}`);
         setDeleted(!deleted);
          if (onDelete) onDelete(id);  // Call the passed function on successful deletion
       } catch (err) {

@@ -12,7 +12,7 @@ export const Dashboard = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3000/bulk")
+    axios.get("https://donor-backend.onrender.com/bulk")
       .then(res => {
         setForm(res.data.form);
         setLoading(false);
