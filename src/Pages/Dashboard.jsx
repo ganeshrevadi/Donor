@@ -65,7 +65,7 @@ const Users = ({ name, email, number, food, location, quantity}) => {
       <div className="inline-flex-start">
         <DeleteCheckbox id={number} onDelete={() => {onDelete}} />
       </div>
-      <dl className="grid grid-cols-2 gap-4 text-gray-900 dark:text-white">
+      <dl className="grid grid-cols-2 gap-4 text-gray-900 dark:text-white px-2">
         <div className="flex flex-col items-center justify-center">
           <dt className="mb-2 text-xl font-extrabold">{name}</dt>
           <dd className="text-gray-500 dark:text-gray-400">Name</dd>
