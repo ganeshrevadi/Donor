@@ -12,8 +12,8 @@ function App() {
     <RecoilRoot>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Form />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path='/' element={<Form />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
     </BrowserRouter>
     </RecoilRoot>

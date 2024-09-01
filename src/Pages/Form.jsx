@@ -4,14 +4,22 @@ import { InputBox } from "../Components/Inputbox"
 import { Button } from "../Components/Button"
 import { useState } from "react"
 import axios from "axios"
+import { useRecoilState } from "recoil"
+import { deletedAtom } from "../store/atoms/deletedAtom"
+import { useNavigate } from "react-router-dom"
+import { Appbar } from "../Components/Appbar"
 
 export const Form = () =>{
+    const navigate = useNavigate();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [number, setNumber] = useState("");
     const [quantity, setQuantity] = useState(0);
+    const [deleted, setDeleted] = useRecoilState(deletedAtom)
 
-    return <div className="bg-slate-300 h-screen flex justify-center p-6">
+    return <div>
+      <Appbar text={"DONOR"} handleChange={() => { navigate('/admin')}} buttonText={"Admin ?"}/>
+    <div className="bg-slate-300 h-screen flex justify-center p-6">
     <div className="flex flex-col justify-center py-6">
       <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4 py-4">
         <Header label={"Donation Form"} />
@@ -38,9 +46,12 @@ export const Form = () =>{
                 number,
                 quantity
               })
+              setDeleted(!deleted);
             }
+            
           } />
         </div>
     </div>
+  </div>
   </div>
 }
