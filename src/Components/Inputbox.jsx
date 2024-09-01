@@ -4,7 +4,7 @@ export function InputBox({
     onChange
   }) {
     return (
-      <div>
+      <div className="p-2">
         <div className="text-sm font-medium text-left py-2">
           {label}
         </div>

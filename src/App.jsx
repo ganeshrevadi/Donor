@@ -6,6 +6,7 @@ import {
 import { Form } from "./Pages/Form"
 import { Admin } from "./Pages/Admin";
 import { RecoilRoot } from "recoil";
+import { Login } from "./Pages/Login";
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Form />} />
+        <Route path='/login' element={<Login/>}/>
         <Route path='/admin' element={<Admin />} />
       </Routes>
     </BrowserRouter>

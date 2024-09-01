@@ -52,14 +52,14 @@ export const Dashboard = () => {
       </div>
       <div className="p-4 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {form.map(ent => (
-          <Users name={ent.name} email={ent.email} number={ent.number} quantity={ent.quantity}/>
+          <Users name={ent.name} email={ent.email} number={ent.number} food={ent.food} location={ent.location} quantity={ent.quantity}/>
         ))}
       </div>
     </>
   );
 };
 
-const Users = ({ name, email, number, quantity}) => {
+const Users = ({ name, email, number, food, location, quantity}) => {
   return (
     <div className="border rounded-lg p-4 bg-white dark:bg-gray-800">
       <div className="inline-flex-start">
@@ -77,6 +77,14 @@ const Users = ({ name, email, number, quantity}) => {
         <div className="flex flex-col items-center justify-center">
           <dt className="mb-2 text-xl font-extrabold">{number}</dt>
           <dd className="text-gray-500 dark:text-gray-400">Number</dd>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <dt className="mb-2 text-xl font-extrabold">{food}</dt>
+          <dd className="text-gray-500 dark:text-gray-400">Food Type</dd>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <dt className="mb-2 text-xl font-extrabold">{location}</dt>
+          <dd className="text-gray-500 dark:text-gray-400">Location</dd>
         </div>
         <div className="flex flex-col items-center justify-center">
           <dt className="mb-2 text-xl font-extrabold">{quantity}</dt>
