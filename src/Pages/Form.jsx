@@ -46,7 +46,7 @@ export const Form = () =>{
         <InputBox placeholder="R V College Mess" label={"Location"} onChange={(e) => {
           setLocation(e.target.value)
         }} />
-        <InputBox placeholder="10" label={"Quantity"} onChange={(e) => {
+        <InputBox placeholder="10" label={"Quantity (in Kgs)"} onChange={(e) => {
           setQuantity(e.target.value)
         }} />
         </div>
